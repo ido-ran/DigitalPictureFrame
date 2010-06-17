@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="DigitalFrame.Module.Image.Views.ImageSettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:Regions="clr-namespace:Microsoft.Practices.Composite.Presentation.Regions;assembly=Microsoft.Practices.Composite.Presentation"
+             xmlns:Core="clr-namespace:DigitalFrame.Core;assembly=DigitalFrame.Core">
+    <Grid>
+        <TabControl Regions:RegionManager.RegionName="{Binding Source={x:Static Core:Regions.ImageSettings}}">
+        </TabControl>
+    </Grid>
+</UserControl>

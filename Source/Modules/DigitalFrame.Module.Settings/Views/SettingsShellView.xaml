@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="DigitalFrame.Module.Settings.Views.SettingsShellView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:CoreConverters="clr-namespace:DigitalFrame.Core.Converters;assembly=DigitalFrame.Core"
+             xmlns:Regions="clr-namespace:Microsoft.Practices.Composite.Presentation.Regions;assembly=Microsoft.Practices.Composite.Presentation"
+             xmlns:Commands="clr-namespace:Microsoft.Practices.Composite.Presentation.Commands;assembly=Microsoft.Practices.Composite.Presentation"
+             xmlns:Core="clr-namespace:DigitalFrame.Core;assembly=DigitalFrame.Core"
+             Height="300"
+             Width="300">
+    <UserControl.Resources>
+        <CoreConverters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+    </UserControl.Resources>
+    <Grid Visibility="{Binding IsVisible, Converter={StaticResource BoolToVisibilityConverter}}"
+          Background="Gold">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TabControl Grid.Row="0" 
+                    TabStripPlacement="Left"
+                    Regions:RegionManager.RegionName="{Binding Source={x:Static Core:Regions.ModuleSettings}}">
+        </TabControl>
+
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal">
+            <Button Content="Save" 
+                    Commands:Click.Command="{Binding SaveCommand}"/>
+            <Button Content="Cancel" 
+                    Commands:Click.Command="{Binding CancelCommand}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

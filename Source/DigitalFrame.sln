@@ -1,0 +1,228 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalFrame", "DigitalFrame\DigitalFrame.csproj", "{AF779A29-53BF-4F7B-9594-9DB43DB15FEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{882431D6-C062-44E0-8638-12A4C14ABA2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{9C849308-7029-4C23-8309-86A436A4FC46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalFrame.Module.Image", "Modules\DigitalFrame.Module.Image\DigitalFrame.Module.Image.csproj", "{98CB3997-C83B-47BB-B563-170D96E52D2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B9707F09-4259-48A2-A13A-9593215C9792}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Tests", "Unit Tests", "{837F014C-328D-4C6A-B1AE-3CD702FA781D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration Tests", "Integration Tests", "{3A9796DD-58F7-4D98-9620-4F9C1F30521B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalFrame.Service.Core", "Services\DigitalFrame.Service.Core\DigitalFrame.Service.Core.csproj", "{E3D9DF24-9373-4157-A812-FC57642318AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalFrame.Service.FileSystemImage", "Services\DigitalFrame.Service.FileSystemImage\DigitalFrame.Service.FileSystemImage.csproj", "{649B78A0-5284-4496-A925-63F02B1FC7CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalFrame.Service.Weather", "Services\DigitalFrame.Service.Weather\DigitalFrame.Service.Weather.csproj", "{C78C66E3-04F9-4EA6-9BD6-D56C3D068805}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalFrame.Module.Weather", "Modules\DigitalFrame.Module.Weather\DigitalFrame.Module.Weather.csproj", "{2ADE6D36-86BE-45E9-A8E7-31C45232D084}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalFrame.Module.Time", "Modules\DigitalFrame.Module.Time\DigitalFrame.Module.Time.csproj", "{6E93989E-DAA8-4F81-AF6D-86A2EB195DE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalFrame.Core", "DigitalFrame.Core\DigitalFrame.Core.csproj", "{65D2F758-40C6-4AB3-A068-2B127DA91630}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{DB043C57-6B53-4306-868A-9825A909F310}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalFrame.Tests.Core", "Tests\DigitalFrame.Tests.Core\DigitalFrame.Tests.Core.csproj", "{6EDDD9EB-02BF-44D9-9741-C30E9452C425}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalFrame.UnitTests", "Tests\Unit Tests\DigitalFrame.UnitTests\DigitalFrame.UnitTests.csproj", "{57BFD7B5-FA59-4F66-AF37-1D7E812F2DF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalFrame.Infrastructure", "DigitalFrame.Infrastructure\DigitalFrame.Infrastructure.csproj", "{20D54625-3490-4522-9334-D2745A57DDC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalFrame.Module.Settings.UnitTests", "Tests\Unit Tests\Modules\DigitalFrame.Module.Settings.UnitTests\DigitalFrame.Module.Settings.UnitTests.csproj", "{A6542C89-526E-45E3-B65E-14B89F192208}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalFrame.Module.Settings", "Modules\DigitalFrame.Module.Settings\DigitalFrame.Module.Settings.csproj", "{6A9E48C6-6F1C-497D-A546-C4FCE17FB516}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalFrame.Module.Weather.UnitTests", "Tests\Unit Tests\Modules\DigitalFrame.Module.Weather.UnitTests\DigitalFrame.Module.Weather.UnitTests.csproj", "{CD223A75-FB9C-495E-9D55-8E1DF4736D14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalFrame.Module.Time.UnitTests", "Tests\Unit Tests\Modules\DigitalFrame.Module.Time.UnitTests\DigitalFrame.Module.Time.UnitTests.csproj", "{29FBEAA1-3C50-4765-BEF1-D504BB4FCB06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalFrame.Core.UnitTests", "Tests\Unit Tests\DigitalFrame.Core.UnitTests\DigitalFrame.Core.UnitTests.csproj", "{68F340D1-A0F3-4E02-BC16-8407B6DCF426}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{09DFE91E-5B55-40E2-97D1-134DC945B724}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalFrame.Service.FileSystemImage.UnitTests", "Tests\Unit Tests\Services\DigitalFrame.Service.FileSystemImage.UnitTests\DigitalFrame.Service.FileSystemImage.UnitTests.csproj", "{62DF36D0-0A64-4D24-B678-00B489CC27FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalFrame.Service.PicasaImage", "Services\DigitalFrame.Service.PicasaImage\DigitalFrame.Service.PicasaImage.csproj", "{D6B06B98-F2F7-4168-8731-8C6D59EEEDD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF779A29-53BF-4F7B-9594-9DB43DB15FEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF779A29-53BF-4F7B-9594-9DB43DB15FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF779A29-53BF-4F7B-9594-9DB43DB15FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF779A29-53BF-4F7B-9594-9DB43DB15FEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98CB3997-C83B-47BB-B563-170D96E52D2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98CB3997-C83B-47BB-B563-170D96E52D2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98CB3997-C83B-47BB-B563-170D96E52D2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98CB3997-C83B-47BB-B563-170D96E52D2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3D9DF24-9373-4157-A812-FC57642318AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3D9DF24-9373-4157-A812-FC57642318AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3D9DF24-9373-4157-A812-FC57642318AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3D9DF24-9373-4157-A812-FC57642318AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{649B78A0-5284-4496-A925-63F02B1FC7CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{649B78A0-5284-4496-A925-63F02B1FC7CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{649B78A0-5284-4496-A925-63F02B1FC7CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{649B78A0-5284-4496-A925-63F02B1FC7CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C78C66E3-04F9-4EA6-9BD6-D56C3D068805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C78C66E3-04F9-4EA6-9BD6-D56C3D068805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C78C66E3-04F9-4EA6-9BD6-D56C3D068805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C78C66E3-04F9-4EA6-9BD6-D56C3D068805}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ADE6D36-86BE-45E9-A8E7-31C45232D084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ADE6D36-86BE-45E9-A8E7-31C45232D084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ADE6D36-86BE-45E9-A8E7-31C45232D084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ADE6D36-86BE-45E9-A8E7-31C45232D084}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E93989E-DAA8-4F81-AF6D-86A2EB195DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E93989E-DAA8-4F81-AF6D-86A2EB195DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E93989E-DAA8-4F81-AF6D-86A2EB195DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E93989E-DAA8-4F81-AF6D-86A2EB195DE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65D2F758-40C6-4AB3-A068-2B127DA91630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65D2F758-40C6-4AB3-A068-2B127DA91630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65D2F758-40C6-4AB3-A068-2B127DA91630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65D2F758-40C6-4AB3-A068-2B127DA91630}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EDDD9EB-02BF-44D9-9741-C30E9452C425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EDDD9EB-02BF-44D9-9741-C30E9452C425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EDDD9EB-02BF-44D9-9741-C30E9452C425}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EDDD9EB-02BF-44D9-9741-C30E9452C425}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57BFD7B5-FA59-4F66-AF37-1D7E812F2DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57BFD7B5-FA59-4F66-AF37-1D7E812F2DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57BFD7B5-FA59-4F66-AF37-1D7E812F2DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57BFD7B5-FA59-4F66-AF37-1D7E812F2DF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20D54625-3490-4522-9334-D2745A57DDC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20D54625-3490-4522-9334-D2745A57DDC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20D54625-3490-4522-9334-D2745A57DDC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20D54625-3490-4522-9334-D2745A57DDC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6542C89-526E-45E3-B65E-14B89F192208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6542C89-526E-45E3-B65E-14B89F192208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6542C89-526E-45E3-B65E-14B89F192208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6542C89-526E-45E3-B65E-14B89F192208}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A9E48C6-6F1C-497D-A546-C4FCE17FB516}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A9E48C6-6F1C-497D-A546-C4FCE17FB516}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A9E48C6-6F1C-497D-A546-C4FCE17FB516}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A9E48C6-6F1C-497D-A546-C4FCE17FB516}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD223A75-FB9C-495E-9D55-8E1DF4736D14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD223A75-FB9C-495E-9D55-8E1DF4736D14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD223A75-FB9C-495E-9D55-8E1DF4736D14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD223A75-FB9C-495E-9D55-8E1DF4736D14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29FBEAA1-3C50-4765-BEF1-D504BB4FCB06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29FBEAA1-3C50-4765-BEF1-D504BB4FCB06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29FBEAA1-3C50-4765-BEF1-D504BB4FCB06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29FBEAA1-3C50-4765-BEF1-D504BB4FCB06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68F340D1-A0F3-4E02-BC16-8407B6DCF426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68F340D1-A0F3-4E02-BC16-8407B6DCF426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68F340D1-A0F3-4E02-BC16-8407B6DCF426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68F340D1-A0F3-4E02-BC16-8407B6DCF426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62DF36D0-0A64-4D24-B678-00B489CC27FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62DF36D0-0A64-4D24-B678-00B489CC27FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62DF36D0-0A64-4D24-B678-00B489CC27FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62DF36D0-0A64-4D24-B678-00B489CC27FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6B06B98-F2F7-4168-8731-8C6D59EEEDD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6B06B98-F2F7-4168-8731-8C6D59EEEDD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6B06B98-F2F7-4168-8731-8C6D59EEEDD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6B06B98-F2F7-4168-8731-8C6D59EEEDD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{98CB3997-C83B-47BB-B563-170D96E52D2F} = {882431D6-C062-44E0-8638-12A4C14ABA2E}
+		{2ADE6D36-86BE-45E9-A8E7-31C45232D084} = {882431D6-C062-44E0-8638-12A4C14ABA2E}
+		{6E93989E-DAA8-4F81-AF6D-86A2EB195DE2} = {882431D6-C062-44E0-8638-12A4C14ABA2E}
+		{6A9E48C6-6F1C-497D-A546-C4FCE17FB516} = {882431D6-C062-44E0-8638-12A4C14ABA2E}
+		{E3D9DF24-9373-4157-A812-FC57642318AF} = {9C849308-7029-4C23-8309-86A436A4FC46}
+		{649B78A0-5284-4496-A925-63F02B1FC7CB} = {9C849308-7029-4C23-8309-86A436A4FC46}
+		{C78C66E3-04F9-4EA6-9BD6-D56C3D068805} = {9C849308-7029-4C23-8309-86A436A4FC46}
+		{D6B06B98-F2F7-4168-8731-8C6D59EEEDD7} = {9C849308-7029-4C23-8309-86A436A4FC46}
+		{837F014C-328D-4C6A-B1AE-3CD702FA781D} = {B9707F09-4259-48A2-A13A-9593215C9792}
+		{3A9796DD-58F7-4D98-9620-4F9C1F30521B} = {B9707F09-4259-48A2-A13A-9593215C9792}
+		{6EDDD9EB-02BF-44D9-9741-C30E9452C425} = {B9707F09-4259-48A2-A13A-9593215C9792}
+		{DB043C57-6B53-4306-868A-9825A909F310} = {837F014C-328D-4C6A-B1AE-3CD702FA781D}
+		{57BFD7B5-FA59-4F66-AF37-1D7E812F2DF4} = {837F014C-328D-4C6A-B1AE-3CD702FA781D}
+		{68F340D1-A0F3-4E02-BC16-8407B6DCF426} = {837F014C-328D-4C6A-B1AE-3CD702FA781D}
+		{09DFE91E-5B55-40E2-97D1-134DC945B724} = {837F014C-328D-4C6A-B1AE-3CD702FA781D}
+		{A6542C89-526E-45E3-B65E-14B89F192208} = {DB043C57-6B53-4306-868A-9825A909F310}
+		{CD223A75-FB9C-495E-9D55-8E1DF4736D14} = {DB043C57-6B53-4306-868A-9825A909F310}
+		{29FBEAA1-3C50-4765-BEF1-D504BB4FCB06} = {DB043C57-6B53-4306-868A-9825A909F310}
+		{62DF36D0-0A64-4D24-B678-00B489CC27FA} = {09DFE91E-5B55-40E2-97D1-134DC945B724}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 18
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs06.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DigitalFrame.Core\\DigitalFrame.Core.csproj
+		SccProjectName1 = DigitalFrame.Core
+		SccLocalPath1 = DigitalFrame.Core
+		SccProjectUniqueName2 = DigitalFrame\\DigitalFrame.csproj
+		SccProjectName2 = DigitalFrame
+		SccLocalPath2 = DigitalFrame
+		SccProjectUniqueName3 = Modules\\DigitalFrame.Module.Image\\DigitalFrame.Module.Image.csproj
+		SccProjectTopLevelParentUniqueName3 = DigitalFrame.sln
+		SccProjectName3 = Modules/DigitalFrame.Module.Image
+		SccLocalPath3 = Modules\\DigitalFrame.Module.Image
+		SccProjectUniqueName4 = Modules\\DigitalFrame.Module.Time\\DigitalFrame.Module.Time.csproj
+		SccProjectTopLevelParentUniqueName4 = DigitalFrame.sln
+		SccProjectName4 = Modules/DigitalFrame.Module.Time
+		SccLocalPath4 = Modules\\DigitalFrame.Module.Time
+		SccProjectUniqueName5 = Modules\\DigitalFrame.Module.Weather\\DigitalFrame.Module.Weather.csproj
+		SccProjectTopLevelParentUniqueName5 = DigitalFrame.sln
+		SccProjectName5 = Modules/DigitalFrame.Module.Weather
+		SccLocalPath5 = Modules\\DigitalFrame.Module.Weather
+		SccProjectUniqueName6 = Services\\DigitalFrame.Service.Core\\DigitalFrame.Service.Core.csproj
+		SccProjectTopLevelParentUniqueName6 = DigitalFrame.sln
+		SccProjectName6 = Services/DigitalFrame.Service.Core
+		SccLocalPath6 = Services\\DigitalFrame.Service.Core
+		SccProjectUniqueName7 = Services\\DigitalFrame.Service.FileSystemImage\\DigitalFrame.Service.FileSystemImage.csproj
+		SccProjectTopLevelParentUniqueName7 = DigitalFrame.sln
+		SccProjectName7 = Services/DigitalFrame.Service.FileSystemImage
+		SccLocalPath7 = Services\\DigitalFrame.Service.FileSystemImage
+		SccProjectUniqueName8 = Services\\DigitalFrame.Service.Weather\\DigitalFrame.Service.Weather.csproj
+		SccProjectTopLevelParentUniqueName8 = DigitalFrame.sln
+		SccProjectName8 = Services/DigitalFrame.Service.Weather
+		SccLocalPath8 = Services\\DigitalFrame.Service.Weather
+		SccProjectUniqueName9 = Tests\\DigitalFrame.Tests.Core\\DigitalFrame.Tests.Core.csproj
+		SccProjectTopLevelParentUniqueName9 = DigitalFrame.sln
+		SccProjectName9 = Tests/DigitalFrame.Tests.Core
+		SccLocalPath9 = Tests\\DigitalFrame.Tests.Core
+		SccProjectUniqueName10 = Tests\\Unit\u0020Tests\\DigitalFrame.UnitTests\\DigitalFrame.UnitTests.csproj
+		SccProjectTopLevelParentUniqueName10 = DigitalFrame.sln
+		SccProjectName10 = Tests/Unit\u0020Tests/DigitalFrame.UnitTests
+		SccLocalPath10 = Tests\\Unit\u0020Tests\\DigitalFrame.UnitTests
+		SccProjectUniqueName11 = DigitalFrame.Infrastructure\\DigitalFrame.Infrastructure.csproj
+		SccProjectName11 = DigitalFrame.Infrastructure
+		SccLocalPath11 = DigitalFrame.Infrastructure
+		SccProjectUniqueName12 = Tests\\Unit\u0020Tests\\Modules\\DigitalFrame.Module.Settings.UnitTests\\DigitalFrame.Module.Settings.UnitTests.csproj
+		SccProjectTopLevelParentUniqueName12 = DigitalFrame.sln
+		SccProjectName12 = Tests/Unit\u0020Tests/Modules/DigitalFrame.Module.Settings.UnitTests
+		SccLocalPath12 = Tests\\Unit\u0020Tests\\Modules\\DigitalFrame.Module.Settings.UnitTests
+		SccProjectUniqueName13 = Modules\\DigitalFrame.Module.Settings\\DigitalFrame.Module.Settings.csproj
+		SccProjectTopLevelParentUniqueName13 = DigitalFrame.sln
+		SccProjectName13 = Modules/DigitalFrame.Module.Settings
+		SccLocalPath13 = Modules\\DigitalFrame.Module.Settings
+		SccProjectUniqueName14 = Tests\\Unit\u0020Tests\\Modules\\DigitalFrame.Module.Weather.UnitTests\\DigitalFrame.Module.Weather.UnitTests.csproj
+		SccProjectTopLevelParentUniqueName14 = DigitalFrame.sln
+		SccProjectName14 = Tests/Unit\u0020Tests/Modules/DigitalFrame.Module.Weather.UnitTests
+		SccLocalPath14 = Tests\\Unit\u0020Tests\\Modules\\DigitalFrame.Module.Weather.UnitTests
+		SccProjectUniqueName15 = Tests\\Unit\u0020Tests\\Modules\\DigitalFrame.Module.Time.UnitTests\\DigitalFrame.Module.Time.UnitTests.csproj
+		SccProjectTopLevelParentUniqueName15 = DigitalFrame.sln
+		SccProjectName15 = Tests/Unit\u0020Tests/Modules/DigitalFrame.Module.Time.UnitTests
+		SccLocalPath15 = Tests\\Unit\u0020Tests\\Modules\\DigitalFrame.Module.Time.UnitTests
+		SccProjectUniqueName16 = Tests\\Unit\u0020Tests\\DigitalFrame.Core.UnitTests\\DigitalFrame.Core.UnitTests.csproj
+		SccProjectTopLevelParentUniqueName16 = DigitalFrame.sln
+		SccProjectName16 = Tests/Unit\u0020Tests/DigitalFrame.Core.UnitTests
+		SccLocalPath16 = Tests\\Unit\u0020Tests\\DigitalFrame.Core.UnitTests
+		SccProjectUniqueName17 = Tests\\Unit\u0020Tests\\Services\\DigitalFrame.Service.FileSystemImage.UnitTests\\DigitalFrame.Service.FileSystemImage.UnitTests.csproj
+		SccProjectTopLevelParentUniqueName17 = DigitalFrame.sln
+		SccProjectName17 = Tests/Unit\u0020Tests/Services/DigitalFrame.Service.FileSystemImage.UnitTests
+		SccLocalPath17 = Tests\\Unit\u0020Tests\\Services\\DigitalFrame.Service.FileSystemImage.UnitTests
+	EndGlobalSection
+EndGlobal

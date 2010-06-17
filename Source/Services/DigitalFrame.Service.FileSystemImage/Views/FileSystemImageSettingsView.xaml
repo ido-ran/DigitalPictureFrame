@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="DigitalFrame.Service.FileSystemImage.Views.FileSystemImageSettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Column="0"
+                   Text="Path" />
+        <TextBox Grid.Column="1"
+                 Text="{Binding Path, Mode=TwoWay}" />
+    </Grid>
+</UserControl>

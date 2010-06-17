@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="DigitalFrame.Module.Weather.Views.WeatherSettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Column="0"
+                   Text="ZipCode" />
+        <TextBox Grid.Column="1"
+                 Text="{Binding ZipCode, Mode=TwoWay}" />
+    </Grid>
+</UserControl>

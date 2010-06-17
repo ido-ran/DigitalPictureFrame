@@ -1,0 +1,215 @@
+﻿<UserControl x:Class="DigitalFrame.Module.Weather.Views.WeatherView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d">
+    <Grid Width="264">
+        <Grid.Resources>
+            <DataTemplate x:Key="ForecastItemTemplate">
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,0,0,10">
+                    <Grid Height="60"
+                          Width="60">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="18" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Border Grid.RowSpan="2"
+                                x:Name="Body"
+                                CornerRadius="5,5,5,5">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.525,1.284"
+                                                     StartPoint="0.525,0.284">
+                                    <GradientStop Color="#FF000000"
+                                                  Offset="0" />
+                                    <GradientStop Color="#FFFFFFFF"
+                                                  Offset="1" />
+                                    <GradientStop Color="#FFFFFFFF"
+                                                  Offset="0.076" />
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                        <Border Grid.RowSpan="1"
+                                CornerRadius="5,5,0,0"
+                                x:Name="Heading"
+                                BorderBrush="#FF000000"
+                                BorderThickness="0,0,0,1">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1"
+                                                     StartPoint="0.525,-1.665">
+                                    <GradientStop Color="#FFF9F8F8"
+                                                  Offset="0" />
+                                    <GradientStop Color="#FF595959"
+                                                  Offset="1" />
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Grid.Row="0"
+                                   Text="{Binding Path=StartTime.DayOfWeek}"
+                                   Foreground="#FFFFFFFF"
+                                   x:Name="DayOfWeek"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   FontSize="10" />
+                        <TextBlock Grid.Row="1"
+                                   Text="{Binding Path=StartTime.Day}"
+                                   Foreground="#FF000000"
+                                   x:Name="Day"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="36"
+                                   FontWeight="Bold" />
+                    </Grid>
+                    <StackPanel Orientation="Vertical"
+                                Margin="10,0,0,0"
+                                HorizontalAlignment="Center">
+                        <Image Source="{Binding Path=SkyCondition.SkyImage}"
+                               HorizontalAlignment="Center" />
+                        <TextBlock Text="{Binding Path=SkyCondition.SkyCondition}"
+                                   HorizontalAlignment="Center" />
+                        <StackPanel Orientation="Horizontal"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding Path=HighTemperatureString}"
+                                       x:Name="Hi" />
+                            <TextBlock Text=" - " />
+                            <TextBlock Text="{Binding Path=LowTemperatureString}"
+                                       x:Name="Lo" />
+
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </DataTemplate>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="194" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0"
+               Source="{Binding Path=WeatherReport.BackgroundImage3}"
+               Width="264"
+               Height="194"
+               x:Name="BackgroundImage3" />
+        <Image Grid.Row="0"
+               Source="{Binding Path=WeatherReport.BackgroundImage2}"
+               Width="264"
+               Height="194"
+               x:Name="BackgroundImage2" />
+        <Image Grid.Row="0"
+               Source="{Binding Path=WeatherReport.BackgroundImage}"
+               Width="264"
+               Height="194"
+               x:Name="BackgroundImage1" />
+        <TextBlock Grid.Row="0"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Top"
+                   Text="{Binding Path=WeatherReport.LatestWeather.TemperatureString}"
+                   TextWrapping="Wrap"
+                   d:LayoutOverrides="Width, Height"
+                   Margin="0,10,25,0"
+                   x:Name="CurrentTemperature"
+                   FontSize="36"
+                   TextAlignment="Right"
+                   Foreground="{Binding Path=WeatherReport.TextColor}" />
+        <TextBlock Grid.Row="0"
+                   VerticalAlignment="Top"
+                   Text="{Binding Path=WeatherReport.LatestWeather.SkyCondition.SkyCondition}"
+                   TextWrapping="Wrap"
+                   x:Name="CurrentCondition"
+                   Margin="0,50,30,0"
+                   TextAlignment="Right"
+                   Foreground="{Binding Path=WeatherReport.TextColor}" />
+        <TextBlock Grid.Row="0"
+                   VerticalAlignment="Top"
+                   Text="{Binding Path=WeatherReport.Location.FullName}"
+                   TextWrapping="Wrap"
+                   x:Name="Location"
+                   Margin="0,70,30,0"
+                   TextAlignment="Right"
+                   Foreground="{Binding Path=WeatherReport.TextColor}" />
+        <TextBlock Grid.Row="0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Text="Feels Like:"
+                   TextWrapping="Wrap"
+                   Margin="20,110,0,0"
+                   Foreground="White" />
+        <TextBlock Grid.Row="0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Text="{Binding Path=WeatherReport.LatestWeather.FeelsLikeString}"
+                   TextWrapping="Wrap"
+                   Margin="80,110,0,0"
+                   x:Name="FeelsLike"
+                   Foreground="White" />
+        <TextBlock Grid.Row="0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Text="Humidity:"
+                   TextWrapping="Wrap"
+                   Margin="20,130,0,0"
+                   Foreground="White" />
+        <TextBlock Grid.Row="0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Text="{Binding Path=WeatherReport.LatestWeather.Humidity}"
+                   TextWrapping="Wrap"
+                   Margin="80,130,0,0"
+                   x:Name="Humidity"
+                   Foreground="White" />
+        <TextBlock Grid.Row="0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Text="Precipitation:"
+                   TextWrapping="Wrap"
+                   Margin="125,110,0,0"
+                   Foreground="White" />
+        <TextBlock Grid.Row="0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Text="{Binding Path=WeatherReport.LatestWeather.PrecipitationString}"
+                   TextWrapping="Wrap"
+                   Margin="200,110,0,0"
+                   x:Name="Precipitation"
+                   Foreground="White" />
+        <TextBlock Grid.Row="0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Text="Wind:"
+                   TextWrapping="Wrap"
+                   Margin="125,130,0,0"
+                   Foreground="White" />
+        <TextBlock Grid.Row="0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Text="{Binding Path=WeatherReport.LatestWeather.WindVector}"
+                   TextWrapping="Wrap"
+                   Margin="200,130,0,0"
+                   x:Name="Wind"
+                   Foreground="White" />
+        <TextBlock Grid.Row="0"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Bottom"
+                   Text="As Of:"
+                   TextWrapping="Wrap"
+                   Margin="20,0,5,25"
+                   FontSize="9"
+                   Foreground="White" />
+
+        <TextBlock Grid.Row="0" 
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Bottom"
+                   Text="{Binding Path=WeatherReport.LatestWeather.Time}"
+                   TextWrapping="Wrap"
+                   Margin="50,0,5,25"
+                   x:Name="Time"
+                   FontSize="9"
+                   Foreground="White" />
+
+        <ItemsControl Grid.Row="1"
+                      ItemsSource="{Binding Path=WeatherReport.Forecast}"
+                      ItemTemplate="{StaticResource ForecastItemTemplate}"
+                      Margin="13,0,0,0" />
+    </Grid>
+</UserControl>

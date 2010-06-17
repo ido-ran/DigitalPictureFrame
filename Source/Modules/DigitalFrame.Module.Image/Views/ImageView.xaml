@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="DigitalFrame.Module.Image.Views.ImageView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <TextBlock Text="Loading Images..."
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"                   
+                   FontSize="20" />
+        <Image Source="{Binding CurrentImage}" />
+        <TextBlock Text="{Binding CurrentTitle}"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Stretch"
+                   TextAlignment="Right"
+                   x:Name="ImageSource"
+                   Margin="0,0,7,3"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2ADE6D36-86BE-45E9-A8E7-31C45232D084}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DigitalFrame.Module.Weather</RootNamespace>
+    <AssemblyName>DigitalFrame.Module.Weather</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.Composite, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft\Desktop\CAL\Microsoft.Practices.Composite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Composite.Presentation, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft\Desktop\CAL\Microsoft.Practices.Composite.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Microsoft\Desktop\Enterprise Library\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\IWeatherServiceConfigurationDataProvider.cs" />
+    <Compile Include="ViewModels\IWeatherViewModel.cs" />
+    <Compile Include="ViewModels\WeatherServiceConfigurationDataProvider.cs" />
+    <Compile Include="ViewModels\WeatherSettings.cs" />
+    <Compile Include="ViewModels\WeatherSettingsViewModel.cs" />
+    <Compile Include="ViewModels\WeatherViewModel.cs" />
+    <Compile Include="ViewModels\IWeatherSettingsViewModel.cs" />
+    <Compile Include="Views\WeatherSettingsView.xaml.cs">
+      <DependentUpon>WeatherSettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WeatherView.xaml.cs">
+      <DependentUpon>WeatherView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WeatherModule.cs" />
+    <Compile Include="WeatherSettingsModule.cs" />
+    <Compile Include="WeatherSettingsRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\WeatherSettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WeatherView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DigitalFrame.Core\DigitalFrame.Core.csproj">
+      <Project>{65D2F758-40C6-4AB3-A068-2B127DA91630}</Project>
+      <Name>DigitalFrame.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DigitalFrame.Infrastructure\DigitalFrame.Infrastructure.csproj">
+      <Project>{20D54625-3490-4522-9334-D2745A57DDC9}</Project>
+      <Name>DigitalFrame.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\DigitalFrame.Service.Core\DigitalFrame.Service.Core.csproj">
+      <Project>{E3D9DF24-9373-4157-A812-FC57642318AF}</Project>
+      <Name>DigitalFrame.Service.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\DigitalFrame.Service.Weather\DigitalFrame.Service.Weather.csproj">
+      <Project>{C78C66E3-04F9-4EA6-9BD6-D56C3D068805}</Project>
+      <Name>DigitalFrame.Service.Weather</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\46.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\47.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\BLACK-base.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\BLUE-base.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\GRAY-base.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\undocked_cloudy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\undocked_few-showers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\undocked_foggy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\undocked_hail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\undocked_moon-first-quarter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\undocked_moon-full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\undocked_moon-last-quarter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\undocked_moon-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\undocked_moon-waning-crescent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\undocked_moon-waning-gibbous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\undocked_moon-waxing-crescent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\undocked_moon-waxing-full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\undocked_moon-waxing-gibbous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\undocked_partly-cloudy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\undocked_rainy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\undocked_snow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\undocked_sun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\undocked_thunderstorm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Images\undocked_windy.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
