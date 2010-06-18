@@ -11,7 +11,7 @@ namespace DigitalFrame
         {
             base.OnStartup(e);
 
-            var bootstrapper = new Bootstrapper();
+            var bootstrapper = new Bootstrapper(e);
             bootstrapper.Run();
         }
     }

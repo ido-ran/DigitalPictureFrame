@@ -14,7 +14,7 @@
 
     <julmar:InputBinder.Bindings>
         <julmar:KeyBinding Command="{Binding SettingsCommand}"
-                           Key="F8" />
+                           Key="F2" />
     </julmar:InputBinder.Bindings>
 
     <Grid>

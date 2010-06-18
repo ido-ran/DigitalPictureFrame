@@ -12,6 +12,9 @@ using Google.Contacts;
 using Google.GData.Client;
 using Google.GData.Contacts;
 using System.Diagnostics;
+using DigitalFrame.Core.Interfaces;
+using Microsoft.Practices.Composite.Events;
+using DigitalFrame.Infrastructure;
 
 namespace DigitalFrame.Service.PicasaImage {
   public class PicasaImageService : IImageService {
@@ -20,6 +23,9 @@ namespace DigitalFrame.Service.PicasaImage {
 
     public event EventHandler<GetImageEventArgs> GetImageComplete;
 
+    private IEventAggregator EventAggregator { get; set; }
+
+    private PicasaImageSettings settings;
     private PicasaService service;
     private List<PicasaEntry> allPhotos;
 
@@ -28,9 +34,35 @@ namespace DigitalFrame.Service.PicasaImage {
     //private PicasaFeed currentAlbum;
     //private int photoIndex;
 
-    public PicasaImageService() {
+    public PicasaImageService(IRepository<PicasaImageSettings> settingsRepository, IEventAggregator eventAggregator) {
+      EventAggregator = eventAggregator;
+      settings = settingsRepository.Load();
+
+      BeginLoadAlbums();
+
+      SubscribeToEvents();
+    }
+
+    private void SubscribeToEvents() {
+      var settingsChangedEvent = EventAggregator.GetEvent<SettingsChangedEvent<PicasaImageSettings>>();
+
+      if (settingsChangedEvent != null) {
+        settingsChangedEvent.Subscribe(OnSettingsChangedEvent);
+      }
+    }
+
+    private void OnSettingsChangedEvent(PicasaImageSettings newSettings) {
+      if (settings.Username == newSettings.Username &&
+          settings.Password == newSettings.Password) {
+        return;
+      }
+
+      allPhotos = null;
+      settings = newSettings;
+
       BeginLoadAlbums();
     }
+
 
     private void BeginLoadAlbums() {
       var backgroundWorker = new BackgroundWorker();
@@ -46,8 +78,8 @@ namespace DigitalFrame.Service.PicasaImage {
 
       // Prepare for contact query
       string applicationName = "DigitalFrame";
-      string username = ""; // TODO: Load from settings
-      string password = "";
+      string username = settings.Username;
+      string password = settings.Password;
 
       RequestSettings contactRequestSettings = new RequestSettings(applicationName, username, password);
       ContactsRequest contactRequest = new ContactsRequest(contactRequestSettings);
@@ -59,11 +91,22 @@ namespace DigitalFrame.Service.PicasaImage {
       //}
 
       // Get Family group entry.
+      Group familyGroup;
       StringBuilder gs = new StringBuilder(GroupsQuery.CreateGroupsUri("default"));
       gs.Append("/");
       gs.Append("e"); // Family
-      Feed<Group> gf = contactRequest.Get<Group>(new Uri(gs.ToString()));
-      Group familyGroup = gf.Entries.First();
+
+      try {
+        Feed<Group> gf = contactRequest.Get<Group>(new Uri(gs.ToString()));
+        familyGroup = gf.Entries.First();
+      }
+      catch (AuthenticationException) {
+        // We fail to get the group which means the login failed.
+        return;
+      }
+      catch (GDataRequestException) {
+        return;
+      }
 
       // Get all contacts in Family group.
       ContactsQuery contactQuery = new ContactsQuery(ContactsQuery.CreateContactsUri("default"));
@@ -123,6 +166,11 @@ namespace DigitalFrame.Service.PicasaImage {
     private Random random = new Random();
 
     public void GetImage() {
+      if (allPhotos == null || allPhotos.Count == 0) {
+        GetImageComplete.Raise(this, new GetImageEventArgs());
+        return;
+      }
+
       int nextPhotoIndex = random.Next(allPhotos.Count);
 
       PicasaEntry photoEntry = allPhotos[nextPhotoIndex];

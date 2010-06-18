@@ -34,7 +34,8 @@ namespace DigitalFrame.Module.Image
         {
             Container.RegisterType<IImageViewModel, ImageViewModel>();
             Container.RegisterType<IImageService, PicasaImageService>();
-            Container.RegisterType<IRepository<FileSystemImageSettings>, FileSystemImageSettingsRepository>(); 
+            Container.RegisterType<IRepository<PicasaImageSettings>, PicasaImageSettingsRepository>();
+            //Container.RegisterType<IRepository<FileSystemImageSettings>, FileSystemImageSettingsRepository>(); 
         }
     }
 }

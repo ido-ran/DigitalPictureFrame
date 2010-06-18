@@ -13,8 +13,8 @@
     <Grid Visibility="{Binding IsVisible, Converter={StaticResource BoolToVisibilityConverter}}"
           Background="Gold">
         <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
         <TabControl Grid.Row="0" 
                     TabStripPlacement="Left"
