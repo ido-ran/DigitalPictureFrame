@@ -12,5 +12,9 @@ namespace DigitalFrame.Module.Image.Views
         {
             InitializeComponent();
         }
+
+        public object Header {
+          get { return "Images"; }
+        }
     }
 }

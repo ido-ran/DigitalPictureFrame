@@ -19,6 +19,12 @@
         <TabControl Grid.Row="0" 
                     TabStripPlacement="Left"
                     Regions:RegionManager.RegionName="{Binding Source={x:Static Core:Regions.ModuleSettings}}">
+            <TabControl.ItemContainerStyle>
+                <Style TargetType="{x:Type TabItem}">
+                    <!-- Each settings view has a property Header which display in the tab item header -->
+                    <Setter Property="Header" Value="{Binding Header}" />
+                </Style>
+            </TabControl.ItemContainerStyle>
         </TabControl>
 
         <StackPanel Grid.Row="1"

@@ -14,5 +14,10 @@ namespace DigitalFrame.Module.Weather.Views
 
             DataContext = weatherSettingsViewModel;
         }
+
+        public object Header {
+          get { return "Weather"; }
+        }
+
     }
 }
