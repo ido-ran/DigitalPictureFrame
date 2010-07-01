@@ -10,29 +10,38 @@
     <UserControl.Resources>
         <CoreConverters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
     </UserControl.Resources>
-    <Grid Visibility="{Binding IsVisible, Converter={StaticResource BoolToVisibilityConverter}}"
-          Background="Gold">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="8*" />
-            <RowDefinition Height="2*" />
-        </Grid.RowDefinitions>
-        <TabControl Grid.Row="0" 
+    <Border 
+        Visibility="{Binding IsVisible, Converter={StaticResource BoolToVisibilityConverter}}"
+        CornerRadius="20" BorderBrush="Transparent" BorderThickness="4" ClipToBounds="True"
+        Background="Gold">
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="8*" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            
+            <TextBlock Text="Settings" FontSize="30" Margin="10,0,0,10" HorizontalAlignment="Center"
+                       Foreground="Black"/>
+            
+            <TabControl Grid.Row="1" 
                     TabStripPlacement="Left"
                     Regions:RegionManager.RegionName="{Binding Source={x:Static Core:Regions.ModuleSettings}}">
-            <TabControl.ItemContainerStyle>
-                <Style TargetType="{x:Type TabItem}">
-                    <!-- Each settings view has a property Header which display in the tab item header -->
-                    <Setter Property="Header" Value="{Binding Header}" />
-                </Style>
-            </TabControl.ItemContainerStyle>
-        </TabControl>
+                <TabControl.ItemContainerStyle>
+                    <Style TargetType="{x:Type TabItem}">
+                        <!-- Each settings view has a property Header which display in the tab item header -->
+                        <Setter Property="Header" Value="{Binding Header}" />
+                    </Style>
+                </TabControl.ItemContainerStyle>
+            </TabControl>
 
-        <StackPanel Grid.Row="1"
+            <StackPanel Grid.Row="2"
                     Orientation="Horizontal">
-            <Button Content="Save" 
+                <Button Content="Save" Width="70" Margin="5"
                     Commands:Click.Command="{Binding SaveCommand}"/>
-            <Button Content="Cancel" 
+                <Button Content="Cancel" Width="70" Margin="5"
                     Commands:Click.Command="{Binding CancelCommand}"/>
-        </StackPanel>
-    </Grid>
+            </StackPanel>
+        </Grid>
+    </Border>
 </UserControl>

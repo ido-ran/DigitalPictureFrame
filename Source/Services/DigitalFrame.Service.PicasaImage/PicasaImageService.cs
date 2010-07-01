@@ -178,10 +178,14 @@ namespace DigitalFrame.Service.PicasaImage {
 
       BitmapImage image = new BitmapImage();
       image.BeginInit();
+
+      // We register for the DownloadCompleted even so that the user of this service
+      // will get a ready-to-use image that can instantly be display.
+      image.DownloadCompleted += (s, e) => {
+        GetImageComplete.Raise(this, new GetImageEventArgs { Image = image, Title = photoEntry.Title.Text });
+      };
       image.UriSource = new Uri(photoUri);
       image.EndInit();
-
-      GetImageComplete.Raise(this, new GetImageEventArgs { Image = image, Title = photoEntry.Title.Text });
     }
 
 

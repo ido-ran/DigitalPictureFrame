@@ -16,7 +16,7 @@ namespace DigitalFrame.ViewModels
 
         private void Settings(object obj)
         {
-            EventAggregator.GetEvent<DisplaySettingsEvent>().Publish(null);;
+            EventAggregator.GetEvent<DisplaySettingsEvent>().Publish(null);
         }
 
         public DelegateCommand<object> SettingsCommand { get; private set; }
